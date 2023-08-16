@@ -1,0 +1,61 @@
+@use "base";
+
+.disable {
+  @include base.disableDiv;
+  opacity: 0.5;
+}
+.main {
+  height: 250px;
+  width: 100px;
+  background: #e6e3de;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+
+  span {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+  }
+
+  div {
+    top: 0px;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    transform: translateY(0px);
+    transition: all 0.2s;
+  }
+
+  .open {
+    transform: translateY(1px);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: #00b1aa;
+  }
+
+  .close {
+    transform: translateY(170px);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: 9px;
+    bottom: 0;
+    background: #00b1aa;
+  }
+
+  .stop {
+    transform: translateY(90px);
+    background: rgb(215, 212, 212);
+  }
+}

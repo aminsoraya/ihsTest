@@ -1,0 +1,39 @@
+.CardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 350px) {
+  .noResponse {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .noResponse {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .noResponse {
+    font-size: 13px;
+  }
+}
+.FavoriteNodes {
+  opacity: 1;
+  background: whitesmoke;
+  color: rgb(7, 156, 186);
+  border-radius: 20px;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.disable {
+  background: rgb(213, 236, 233);
+}
+
+.disableDiv {
+  pointer-events: none;
+}

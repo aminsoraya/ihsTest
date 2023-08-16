@@ -1,0 +1,119 @@
+@use "base";
+
+%header {
+  @include base.header;
+}
+.fixHeader {
+  @include base.fixHeader;
+}
+%row {
+  display: flex;
+  background: white;
+  padding: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.main {
+  position: relative;
+  .header {
+    @extend %header;
+    display: flex;
+    justify-content: space-between;
+    .activeButton {
+      color: orange;
+    }
+    .disableButton {
+      @include base.disableDiv;
+      color: rgb(219, 217, 217);
+    }
+  }
+  .body {
+    margin-top: 40px;
+    .row {
+      @extend %row;
+      margin-top: 10px;
+      border-radius: 15px;
+      color: orange;
+      .icon {
+        border: 1px solid orange;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 50px;
+        color: orange;
+        cursor: pointer;
+        height: 50px;
+      }
+      input {
+        width: 100%;
+      }
+    }
+    .box {
+      overflow: hidden;
+      border-radius: 15px;
+      background: white;
+      margin-top: 10px;
+      textarea {
+        min-height: 100px;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-size: 14px;
+      }
+      .row {
+        border-radius: 0;
+        border-bottom: 1px solid rgb(231, 229, 229);
+        margin: 0;
+        color: orange;
+        .inputSms {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          color: gray;
+          min-width: 80%;
+          padding-bottom: 5px;
+          margin-bottom: 10px;
+          span {
+            &:last-child {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .alignCenter {
+      display: flex;
+      justify-content: center;
+    }
+    .row:last-child {
+      border-bottom: none;
+    }
+    .flexColumn {
+      flex-direction: column;
+    }
+    .overflowScroll {
+      overflow-y: scroll;
+    }
+    .marginTop {
+      margin-top: 25px;
+    }
+    .whenToStart {
+      min-width: 200px;
+      margin-top: 20px;
+    }
+    .whenToStartWeekly {
+      min-width: 100%;
+    }
+  }
+}

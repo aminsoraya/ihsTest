@@ -1,0 +1,23 @@
+@use "base";
+
+.card {
+  @include base.Color;
+  background: rgba(230, 230, 230, 0.9) !important;
+  width: 180px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  height: 50px;
+  @include base.flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  span {
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 13px;
+  }
+}

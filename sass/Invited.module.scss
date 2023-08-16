@@ -1,0 +1,90 @@
+$save-color: orange;
+$home-color: black;
+$cancle-color: orange;
+$main-color: gray;
+$border-color: rgb(223, 217, 217);
+
+%Colorize {
+  min-width: 130px;
+  cursor: pointer;
+  height: 250px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.main {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    color: orange;
+
+    > div {
+      display: flex;
+    }
+  }
+
+  .rowSimple {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+  .rows {
+    background: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    .colorSection {
+      display: flex;
+      justify-content: center;
+      .color {
+        height: 270px;
+        width: 200px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+    .row {
+      min-height: 50px;
+      padding-right: 10px;
+      padding-left: 10px;
+      border-bottom: 1px solid $border-color;
+      &:last-child {
+        border: none;
+      }
+      display: flex;
+      align-items: center;
+      .icon {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+      .text {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        padding: 5px;
+        > div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .section {
+    margin-top: 20px;
+    .homeNotes {
+      padding: 10px;
+      height: 200px;
+    }
+  }
+}

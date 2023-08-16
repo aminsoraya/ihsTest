@@ -1,0 +1,59 @@
+@use "base";
+
+.card {
+  .disableDiv {
+    @include base.disableDiv;
+    color: rgb(214, 208, 208);
+  }
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  font-size: 13px;
+  .row {
+    cursor: pointer;
+    display: flex;
+    padding: 5px 10px 5px 3px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    cursor: pointer;
+    .bullet {
+      position: relative;
+      > span {
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        background: red;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .row:last-child {
+    border: none;
+  }
+}
+
+.active {
+  background: rgba(245, 245, 245, 0.4784313725);
+  color: black;
+  margin: 5px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  width: 100%;
+}

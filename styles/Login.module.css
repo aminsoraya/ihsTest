@@ -1,0 +1,18 @@
+.card {
+  min-height: 300px;
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 5px 30px 0px 30px;
+  max-width: 400px;
+  border-radius: 20px !important;
+  box-shadow: none !important;
+  margin: 5;
+}
+#input-with-icon-textfield {
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+}

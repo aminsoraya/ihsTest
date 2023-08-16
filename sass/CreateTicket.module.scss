@@ -1,0 +1,40 @@
+$width: 70%;
+
+%row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  .row {
+    @extend %row;
+    input,
+    select {
+      height: 35px;
+      width: $width;
+    }
+    input {
+      padding: 10px 10px;
+    }
+  }
+  .areaRow {
+    @extend %row;
+    textarea {
+      width: $width;
+      height: 150px;
+      border: 1px solid rgb(224, 221, 221);
+      outline: none;
+      border-radius: 5px;
+      padding: 10px 10px;
+      resize: none;
+    }
+    button {
+      height: 35px;
+      width: $width;
+    }
+  }
+}

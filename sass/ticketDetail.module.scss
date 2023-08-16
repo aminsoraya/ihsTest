@@ -1,0 +1,94 @@
+%triangle-top {
+  width: 0;
+  height: 0;
+  border-top: 10px solid rgb(186, 241, 186);
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: 0;
+}
+%chat-box {
+  margin-top: 50px;
+  border-radius: 5px;
+  margin-left: 20px;
+  position: relative;
+  color: black;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top-right-radius: 0;
+  font-size: 14px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+.main {
+  width: 100%;
+  height: calc(100vh - 32rem);
+  position: relative;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  .triangle_top_right {
+    @extend %triangle-top;
+    border-top: 10px solid rgb(186, 241, 186);
+    right: -10px;
+  }
+  .triangle_top_left {
+    @extend %triangle-top;
+    border-top: 10px solid white;
+    left: -10px;
+    rotate: 90deg;
+  }
+
+  .chat_box_user {
+    @extend %chat-box;
+    background: rgb(186, 241, 186);
+    border-top-right-radius: 0;
+  }
+  .chat_box_tech {
+    @extend %chat-box;
+    background: white;
+    border-top-right-radius: 0;
+    margin-right: 10%;
+    .userResponseName {
+      position: absolute;
+      top: -25px;
+      color: gray;
+    }
+  }
+  .chat_buttom {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(90, 89, 89);
+  }
+}
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  justify-items: center;
+  display: flex;
+  background-color: white;
+  textarea {
+    width: 95%;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+  .send_icon {
+    position: absolute;
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    rotate: 180deg;
+    left: 10px;
+    cursor: pointer;
+    color: orange;
+  }
+}

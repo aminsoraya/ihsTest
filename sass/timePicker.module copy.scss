@@ -1,0 +1,13 @@
+.selectTime {
+  background-color: white;
+  border: none;
+  direction: ltr;
+  min-width: 70px;
+  appearance: none;
+  text-align: center;
+  color: gray;
+}
+
+.selectTime:focus {
+  outline: 0 none;
+}

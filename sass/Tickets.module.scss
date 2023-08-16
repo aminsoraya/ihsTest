@@ -1,0 +1,68 @@
+%ticket {
+  height: 200px;
+  width:min(100%,400px);
+  border: 1px solid gray;
+  margin: 15px;
+  background: white;
+  border: whitesmoke;
+  box-shadow: 0 0 5px gray;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  color: gray;
+  cursor: pointer;
+  span:nth-child(1) {
+    color: black;
+    font-size: 50px;
+    border-radius: 70px;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(92, 151, 97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgb(137, 197, 145);
+    color: white;
+    
+  }
+}
+.main {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .ticket:nth-child(1) {
+    @extend %ticket;
+    span:nth-child(1) {
+      background-color: blue;
+    }
+  }
+  .ticket:nth-child(2) {
+    @extend %ticket;
+    span:nth-child(1) {
+      background-color: green;
+    }
+  }
+  .loading {
+    display: flex; 
+    justify-content: space-around;
+    .skeleton {
+      display: flex;
+      align-items: center;
+      border: 1px solid whitesmoke;
+      padding: 10px;
+      box-shadow: 0 0 2px gray;
+      border-radius: 15px;
+      width: 400px;
+      height: 200px;
+      justify-content: space-around;
+      margin: 10px;
+    }
+  }
+}

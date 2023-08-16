@@ -1,0 +1,337 @@
+@use "base";
+
+$save-color: orange;
+$home-color: black;
+$cancle-color: orange;
+$main-color: gray;
+
+%Colorize {
+  min-width: 130px;
+  cursor: pointer;
+  height: 250px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.Header_Fix {
+  background: whitesmoke;
+  color: gray;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  left: 0;
+  padding: 5px 20px;
+  box-shadow: 0 0 10px #9f9b9b;
+}
+.Header {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  left: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 45px;
+}
+.backgroundWhite {
+  background: whitesmoke;
+  color: black;
+}
+.bullet {
+  position: relative;
+  span {
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: red;
+    top: 12px;
+    left: 2px;
+  }
+}
+
+.disableDiv {
+  @include base.disableDiv;
+  color: rgb(214, 208, 208);
+}
+
+.GridRow {
+  @include base.flex;
+  justify-content: space-between;
+  color: red($color: #000000);
+  .titlePage {
+    height: 75px;
+  }
+  .item {
+    @include base.flex;
+    width: 100vw;
+    justify-content: space-between;
+    > div {
+      padding-top: 5px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+.GridButton {
+  cursor: pointer;
+  &.Exit {
+    margin-right: 10px;
+  }
+}
+
+.GridColumn {
+  @include base.flex;
+  flex-direction: column !important;
+  justify-content: space-around;
+  > div {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    max-width: 105px;
+    span {
+      display: block;
+      font-size: 13px;
+    }
+  }
+  .circleIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+}
+
+.left {
+  text-align: left;
+  direction: ltr;
+}
+.right {
+  text-align: right;
+  direction: rtl;
+}
+.rotate {
+  rotate: 180deg;
+}
+.footer {
+  box-shadow: 0 0 10px #9f9b9b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: whitesmoke;
+  color: gray;
+  .card {
+    @include base.flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .active {
+    color: orange;
+  }
+  .deactive {
+    color: gray;
+  }
+  .active,
+  .deactive {
+    cursor: pointer;
+  }
+}
+
+.disconnectDevice {
+  width: 78px;
+  margin-right: 2;
+  margin-left: 2;
+  display: flex;
+  text-align: center;
+}
+.FavoriteScenarios {
+  @include base.Color;
+  background: rgb(213, 236, 233);
+  width: 250px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  height: 60px;
+  @include base.flex;
+  align-items: center;
+}
+.badge {
+  position: relative;
+  > div {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: -11px;
+    font-size: 10px;
+    color: white;
+    box-shadow: 0 0 1px red;
+  }
+}
+.main {
+  border-top: 1px solid rgb(236, 232, 232);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: whitesmoke;
+  bottom: 0;
+  height: 0%;
+  border-radius: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: gray;
+  left: 0;
+  right: 0;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  overflow-y: scroll;
+  .saveColor {
+    color: $save-color;
+  }
+  .mainColor {
+    color: $main-color;
+  }
+  .button {
+    cursor: pointer;
+  }
+  .homeColor {
+    color: $home-color;
+  }
+  .cancleColor {
+    color: $cancle-color;
+  }
+
+  input {
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    outline: none;
+  }
+  .rowFlex {
+    display: flex;
+    justify-content: space-between;
+    color: "AppWorkspace";
+    padding-top: 10px;
+  }
+  .rowCol {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .colorize {
+      justify-content: normal;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: scroll;
+      display: flex;
+      position: relative;
+      width: 100%;
+      .color1 {
+        @extend %Colorize;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(23, 167, 193, 1) 78%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+      .color2 {
+        @extend %Colorize;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 0, 1) 0%,
+          rgba(0, 188, 212, 1) 50%,
+          rgba(238, 130, 238, 1) 100%
+        );
+      }
+      .color3 {
+        @extend %Colorize;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(88, 148, 110, 1) 0%,
+          rgba(126, 185, 141, 1) 59%,
+          rgba(126, 185, 141, 1) 82%
+        );
+      }
+      .color4 {
+        @extend %Colorize;
+        background: linear-gradient(
+          90deg,
+          #000046 0%,
+          #4f1c96,
+          33%,
+          #1cb5e0 100%
+        );
+      }
+      .color5 {
+        @extend %Colorize;
+        background: linear-gradient(
+          90deg,
+          rgb(10, 182, 248) 0%,
+          rgb(237, 45, 83) 100%
+        );
+      }
+      .color6 {
+        @extend %Colorize;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 0, 1) 0%,
+          rgba(0, 188, 212, 1) 50%,
+          rgba(238, 130, 238, 1) 100%
+        );
+      }
+    }
+  }
+}
+.sensors {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-top: 10px;
+  z-index: 1;
+  .content {
+    display: flex;
+    //overflow-x: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}

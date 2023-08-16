@@ -1,0 +1,42 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: gray;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.content {
+  height: fit-content;
+  min-width: 400px;
+  width: fit-content;
+  position: fixed;
+  background: white;
+  top: 50%;
+  z-index: 100;
+  left: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  > div:nth-child(1) {
+    position: relative;
+    background: gray;
+    color: "white";
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-right: 10px;
+  }
+  > div:nth-child(2) {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .button {
+    overflow-y: scroll;
+    
+  }
+}

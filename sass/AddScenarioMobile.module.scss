@@ -1,0 +1,56 @@
+$save-color: orange;
+$home-color: black;
+$cancle-color: orange;
+$main-color: gray;
+$border-color: rgb(223, 217, 217);
+
+%Colorize {
+  min-width: 130px;
+  cursor: pointer;
+  height: 250px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.main {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    color: orange;
+  }
+
+  .rows {
+    background: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    .row {
+      min-height: 50px;
+      padding-right: 10px;
+      padding-left: 10px;
+      width: 100%;
+      border-bottom: 1px solid rgb(211, 209, 209);
+      &:last-child {
+        border-bottom: none;
+      }
+      input {
+        width: 100%;
+        text-align: left;
+      }
+      textarea {
+        border: none;
+        outline: none;
+        width: 100%;
+        min-height: 100px;
+      }
+    }
+  }
+  .scenarioSection {
+    margin-top: 20px;
+  }
+}

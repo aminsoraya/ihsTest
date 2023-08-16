@@ -1,0 +1,29 @@
+.card {
+  opacity: 1;
+  background: whitesmoke;
+  color: rgb(7, 156, 186);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  font-size: 13px;
+}
+.card .row {
+  display: flex;
+  padding: 5px 10px 5px 3px;
+  border-bottom: 1px solid rgb(209, 205, 205);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  cursor: pointer;
+}
+.card .row > div {
+  display: flex;
+  align-items: center;
+}
+.card .row:last-child {
+  border: none;
+}

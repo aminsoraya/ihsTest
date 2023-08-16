@@ -1,0 +1,34 @@
+@mixin Color {
+  opacity: 1;
+  background: whitesmoke;
+  color: rgb(7, 156, 186);
+}
+@mixin flex() {
+  display: flex;
+}
+@mixin disable() {
+  background: rgb(213, 236, 233);
+  // pointer-events: none;
+}
+@mixin disableDiv {
+  pointer-events: none;
+}
+@mixin header {
+  width: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  left: 0;
+  opacity: 1;
+  height: 45px;
+  padding-top: 10px;
+}
+@mixin fixHeader{
+  position: fixed;
+  padding-right: 30px;
+  background: whitesmoke;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 11;
+}

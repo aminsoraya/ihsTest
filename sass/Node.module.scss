@@ -1,0 +1,158 @@
+.active {
+  color: rgb(244, 197, 13);
+}
+.deactive {
+  color: gray;
+}
+.main {
+  .fixHeader{
+    position: fixed;
+    padding-top: 10px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: whitesmoke;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  position: relative;
+  top: 0;
+  .control {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      width: 100px;
+      text-align: center;
+    }
+  }
+
+  .rowFlex {
+    display: flex;
+    justify-content: space-between;
+    color: "AppWorkspace";
+    padding-top: 10px;
+  }
+
+  .saveColor {
+    color: orange;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+    .close {
+      display: flex;
+      align-items: center;
+      align-items: center;
+      width: 80px;
+      justify-content: space-around;
+    }
+
+    .closeIcon {
+      font-size: 30px;
+    }
+
+    .icon {
+      cursor: pointer;
+    }
+
+    .name {
+      display: flex;
+      width: 130px;
+      justify-content: space-between;
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+          text-align: center;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.deviceName {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 50px;
+  > div {
+    border: 1px solid orange;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    color: orange;
+    cursor: pointer;
+  }
+}
+.config {
+  margin-top: 10px;
+  background: white;
+  border-radius: 15px;
+  .removeBorder {
+    border: none;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(235, 229, 229);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: center;
+    min-height: 55px;
+    cursor: pointer;
+  }
+  .row:last-child {
+    border-bottom: none;
+    margin-bottom: 10px;
+  }
+  .dropDown {
+    border-bottom: 1px solid rgb(235, 229, 229);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s ease;
+    span {
+      font-size: 20px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+  .show {
+    opacity: 1;
+    height: 150px;
+    margin-top: 0;
+  }
+  .hide {
+    opacity: 0;
+    height: 0px;
+    margin-top: -15px;
+  }
+  .scale {
+    transform: scale(1.5);
+    color: black;
+  }
+  .blackColor {
+    color: black;
+  }
+}

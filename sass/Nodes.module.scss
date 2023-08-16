@@ -1,0 +1,48 @@
+@use "base";
+.CardIcon {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.noResponse {
+  font-size: 11px;
+}
+
+.nodeName {
+  font-size: 13px;
+}
+
+.roomName {
+  margin-top: 7px;
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+.FavoriteNodes {
+  @include base.Color;
+  background: rgba(230, 230, 230, 0.9) !important;
+  border-radius: 15px;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 1px #b0a4a4;
+  width: 105px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+}
+.disable {
+  background: #ecececdc;
+}
+.disableDiv {
+  @include base.disableDiv;
+}

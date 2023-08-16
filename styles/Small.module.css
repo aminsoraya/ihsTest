@@ -1,0 +1,136 @@
+.Container {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.Header_Fix {
+  background: whitesmoke;
+  color: gray;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  left: 0;
+  padding: 5px 20px;
+  box-shadow: 0 0 10px #9f9b9b;
+}
+
+.Header {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  margin: 0;
+  left: 0;
+  padding: 5px 20px;
+}
+
+.backgroundWhite {
+  background: whitesmoke;
+  color: black;
+}
+
+.GridRow {
+  display: flex;
+  justify-content: space-between;
+  color: 0;
+}
+.GridRow .item {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+.GridRow .item > div {
+  padding-top: 5px;
+  position: relative;
+}
+
+.GridButton {
+  cursor: pointer;
+}
+.GridButton.Exit {
+  margin-right: 10px;
+}
+
+.GridColumn {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-around;
+}
+.GridColumn .circleIcon {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.left {
+  text-align: left;
+  direction: ltr;
+}
+
+.right {
+  text-align: right;
+  direction: rtl;
+}
+
+.rotate {
+  rotate: 180deg;
+}
+
+.footer {
+  box-shadow: 0 0 10px #9f9b9b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: whitesmoke;
+  color: gray;
+}
+.footer .card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.footer .active {
+  color: orange;
+}
+.footer .deactive {
+  color: gray;
+}
+.footer .active,
+.footer .deactive {
+  cursor: pointer;
+}
+
+.disconnectDevice {
+  width: 78px;
+  margin-right: 2;
+  margin-left: 2;
+  display: flex;
+  text-align: center;
+}
+
+.FavoriteScenarios {
+  opacity: 1;
+  background: whitesmoke;
+  color: rgb(7, 156, 186);
+  background: rgb(213, 236, 233);
+  width: 250px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}

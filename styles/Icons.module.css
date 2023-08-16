@@ -1,0 +1,25 @@
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  color: #1d90bd;
+  margin-top: 40px;
+}
+.icon .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  max-width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.active {
+  border: 1px solid orange;
+  border-radius: 10px;
+}

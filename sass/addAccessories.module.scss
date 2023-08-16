@@ -1,0 +1,39 @@
+@use "base";
+
+%row {
+  display: flex;
+  background: white;
+  padding: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+.header {
+  @include base.header;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+.body {
+  overflow-y: auto;
+  background-color: white;
+  max-height: 85vh;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.button {
+  color: orange;
+}
+.title {
+  color: black;
+}

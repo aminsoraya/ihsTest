@@ -1,0 +1,174 @@
+.active {
+  color: rgb(244, 197, 13);
+}
+
+.deactive {
+  color: gray;
+}
+
+.main {
+  position: relative;
+  top: 0;
+}
+.main .header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding-right: 13px;
+  padding-left: 13px;
+  background: whitesmoke;
+  top: 18px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 15px;
+  border-bottom: none;
+}
+.main .header .close {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  width: 80px;
+  justify-content: space-around;
+}
+.main .header .closeIcon {
+  font-size: 30px;
+}
+.main .header .icon {
+  cursor: pointer;
+}
+.main .header .name {
+  display: flex;
+  width: 130px;
+  justify-content: space-between;
+}
+.main .header .name > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .header .name > div span {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.deviceToggler {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.deviceName {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 50px;
+}
+.deviceName > div {
+  border: 1px solid orange;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  color: orange;
+  cursor: pointer;
+}
+
+.config {
+  margin-top: 10px;
+  background: white;
+  border-radius: 15px;
+}
+.config .removeBorder {
+  border: none;
+}
+.config .row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(235, 229, 229);
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  align-items: center;
+  min-height: 55px;
+  cursor: pointer;
+}
+.config .row:last-child {
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+.config .dropDown {
+  border-bottom: 1px solid rgb(235, 229, 229);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.2s ease;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+.config .dropDown span {
+  font-size: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.config .show {
+  opacity: 1;
+  height: 150px;
+  margin-top: 0;
+}
+.config .hide {
+  opacity: 0;
+  height: 0px;
+  margin-top: -15px;
+}
+.config .scale {
+  transform: scale(1.5);
+  color: black;
+}
+.config .blackColor {
+  color: black;
+}
+
+.toggle {
+  height: 250px;
+  background: #e6e3de;
+  width: 100px;
+  border-radius: 15px;
+  position: relative;
+}
+.toggle .switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  height: 134px;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 15px;
+  transition: 0.4s;
+  background: linear-gradient(90deg, rgb(222, 203, 28) 0%, rgb(241, 207, 10) 49%, rgb(255, 214, 0) 100%);
+}
+.toggle .up {
+  top: 71%;
+  background: gray;
+}
+.toggle .down {
+  top: 29%;
+}

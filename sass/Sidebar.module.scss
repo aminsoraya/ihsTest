@@ -1,0 +1,65 @@
+@use "base";
+
+.disableDiv {
+  @include base.disableDiv;
+  color: rgb(214, 208, 208);
+}
+.sideBar {
+  padding: 10px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  overflow-x: hidden;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.17);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  z-index: 10;
+  background: #3c3b3f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #605c3c,
+    #3c3b3f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #605c3c,
+    #3c3b3f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  .row {
+    cursor: pointer;
+    margin: 5px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    > span {
+      margin-right: 10px;
+    }
+  }
+  .active {
+    background: #f5f5f57a;
+    color: black;
+  }
+}
+
+.badge {
+  background: red;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 11px;
+  margin-right: 5px;
+  margin-left: 5px;
+}

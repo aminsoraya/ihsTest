@@ -1,0 +1,45 @@
+@use "base";
+
+.card {
+  .disableDiv {
+    @include base.disableDiv;
+    color: rgb(214, 208, 208);
+  }
+  @include base.Color;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  font-size: 13px;
+  .row {
+    display: flex;
+    padding: 5px 10px 5px 3px;
+    border-bottom: 1px solid rgb(209, 205, 205);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    cursor: pointer;
+    .bullet {
+      position: relative;
+      span {
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        background: red;
+        top: 0;
+        left: 0;
+      }
+    }
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .row:last-child {
+    border: none;
+  }
+}

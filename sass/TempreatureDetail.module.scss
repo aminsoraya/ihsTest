@@ -1,0 +1,132 @@
+.main {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(74, 196, 87, 1) 0%,
+    rgba(205, 205, 11, 1) 48%,
+    rgba(255, 109, 0, 1) 100%
+  );
+  .manual {
+    position: relative;
+    width: 230px;
+    height: 120px;
+    border: 35px solid #f0efef;
+    border-bottom-style: solid;
+    border-bottom-width: 35px;
+    border-bottom: 0;
+    border-radius: 999px 999px 0 0;
+    padding: 20px;
+
+    background: linear-gradient(
+      90deg,
+      rgba(74, 196, 87, 1) 0%,
+      rgba(205, 205, 11, 1) 48%,
+      rgba(255, 109, 0, 1) 100%
+    );
+
+    .first {
+      position: absolute;
+      left: -85px;
+      bottom: 0;
+    }
+    .second {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .third {
+      position: absolute;
+      right: -80px;
+      bottom: 0;
+    }
+  }
+  .flashContainer {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .flashMiddleContainer {
+      position: relative;
+      height: 130px;
+      width: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all ease 1s;
+      .arrow {
+        height: 120px;
+        width: 20px;
+        transform: rotate(90deg);
+        left: 0px;
+        position: absolute;
+      }
+      .circleInside {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        z-index: 1;
+        background: linear-gradient(
+          90deg,
+          rgb(215, 212, 212) 1%,
+          rgb(185, 182, 182) 49%,
+          rgb(205, 204, 204) 100%
+        );
+      }
+    }
+    .hig {
+      transform: rotate(180deg);
+    }
+    .low {
+      transform: rotate(0deg);
+    }
+    .mid {
+      transform: rotate(90deg);
+    }
+  }
+
+  .status {
+    height: 190px;
+    width: 190px;
+    z-index: 100px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+
+  .disableControl {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0.3;
+    margin-top: -40px;
+  }
+}
+.modeStatus {
+  width: 150px;
+  position: relative;
+  z-index: 100;
+  border: none;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  transform: scale(1.1);
+  margin-top:30px;
+}

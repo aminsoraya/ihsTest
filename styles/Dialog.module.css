@@ -1,0 +1,55 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: gray;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.content {
+  height: 100px;
+  width: 95%;
+  position: fixed;
+  background: white;
+  bottom: 53px;
+  z-index: 4;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+}
+.content > div {
+  position: relative;
+}
+.content > div .button {
+  width: 100%;
+  min-height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: white;
+  z-index: 111;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.content > div .button .remove {
+  color: red;
+  border-radius: 15px;
+}
+.content > div .button .cancle {
+  color: orange;
+}
+.content > div .button:first-child {
+  min-height: 80px !important;
+  padding: 8px 10px 5px 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid rgb(221, 216, 216);
+  font-size: 13px;
+}
+.content > div .button:last-child {
+  margin-top: 10px;
+  border-radius: 15px;
+}

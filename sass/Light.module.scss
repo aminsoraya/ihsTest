@@ -1,0 +1,45 @@
+.deviceToggler {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.toggle {
+  height: 250px;
+  background: #e6e3de;
+  width: 100px;
+  border-radius: 15px;
+  position: relative;
+  .switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    height: 134px;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 15px;
+    transition: 0.4s;
+    background: linear-gradient(
+      90deg,
+      rgb(222, 203, 28) 0%,
+      rgb(241, 207, 10) 49%,
+      rgb(255, 214, 0) 100%
+    );
+  }
+
+  .up {
+    top: 71%;
+    background: gray;
+  }
+  .down {
+    top: 29%;
+  }
+  .disable {
+    pointer-events: none;
+  }
+}
