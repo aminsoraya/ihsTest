@@ -25,7 +25,7 @@ export async function DispatchApi({
   let token: IToken | undefined;
 
   const axios = Axios(
-    location.host.includes(process.env.NEXT_PUBLIC_DEV_ADMIN_URL) ||
+    location.host.includes(process.env.NEXT_PUBLIC_DEV_ADMIN_URL) ||location.host.includes("vercel")||
       location.host.includes("localhost")
       ? process.env.NEXT_PUBLIC_DEV_API_URL
       : process.env.NEXT_PUBLIC_PROD_API_URL

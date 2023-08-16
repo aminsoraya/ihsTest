@@ -2,9 +2,10 @@ import { IToken } from "../bussiness/Login";
 import jwtDecode from "jwt-decode";
 import { Axios } from "../axios";
 
-const CheckToken=async()=> {
+const CheckToken = async () => {
   const axios = Axios(
     location.host.includes(process.env.NEXT_PUBLIC_DEV_ADMIN_URL) ||
+      location.host.includes("vercel") ||
       location.host.includes("localhost")
       ? process.env.NEXT_PUBLIC_DEV_API_URL
       : process.env.NEXT_PUBLIC_PROD_API_URL
@@ -48,10 +49,10 @@ const CheckToken=async()=> {
           return true;
         }
       } else if (data.statusCode && data.statusCode == 3) {
-        localStorage.removeItem("token")
+        localStorage.removeItem("token");
         return false;
       }
     });
   } else return true;
-}
-export {CheckToken}
+};
+export { CheckToken };

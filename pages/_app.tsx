@@ -13,9 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(router.pathname);
-    router.pathname == "/" && router.push("/dashboard");
-  }, []);
+    (router.pathname == "/" || router.pathname == "") &&
+      router.push("/dashboard");
+  }, [router]);
 
   return (
     <>
